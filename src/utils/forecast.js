@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `${body.daily.data[0].summary} Αυτή τη στιγμή η θερμοκρασία είναι ${body.currently.temperature} βαθμοί Κελσίου. Η πιθανότητα βροχής είναι ${body.currently.precipProbability} %.`
+        `${body.daily.data[0].summary} Αυτή τη στιγμή η θερμοκρασία είναι ${body.currently.temperature} βαθμοί Κελσίου. Η υψηλότερη θερμοκρασία για σήμερα θα είναι ${body.daily.data[0].temperatureHigh} ενώ η χαμηλότερη ${body.daily.data[0].temperatureLow}. Η πιθανότητα βροχής είναι ${body.currently.precipProbability} %.`
       );
     }
   });
